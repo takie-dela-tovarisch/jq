@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style media="screen">
+body {
+  margin: 0 auto;
+}
+.box {
+  position: absolute;
+}
+.box2 {
+  top: 15vw;
+  position: absolute;
+}
+.hover {
+  display: block;
+  margin-left: 4vw;
+  margin-top: -5vw;
+  position: relative;
+  background-color: #2196f3;
+  width: 8vw;
+ height: 8vw;
+ border-radius: 50%;
+ animation: hover 2s ease-in-out alternate infinite;
+ transform-origin: right bottom;
+ cursor: pointer;
+ z-index: 1;
+}
+@keyframes hover {
+  from {width: 8vw; height: 8vw;}
+  to { width: 9vw; height: 9vw; background-color: #9c27b0;}
+}
+.slide {
+  position: relative;
+  display: block;
+    margin: 0;
+    background-color: #2196f3;
+    width: 20vw;
+    height: 0vw;
+    transition: .5s;
+    z-index: 200;
+
+}
+.two-slide {
+  position: relative;
+    display: block;
+    height: 10vw;
+    background-color: #9c27b0;
+    z-index: 200;
+}
+.hihi {
+  position: absolute;
+  display: inline-block;
+  top: 1vw;
+  left: 2vw;
+  width: 4vw;
+  height: 4vw;
+  cursor: pointer;
+  background-color: #8B0000;
+  border-radius: 50%;
+}
+.jelly {
+  position: absolute;
+  display: inline-block;
+left: 8vw;
+border-radius: 10%;
+  background-color: #ADFF2F;
+  transform-origin: center bottom;
+  width: 10vw;
+  height: 5vw;
+  transition: .2s;
+}
+.jelly-two {
+  animation: jelly 1s;
+}
+.jelly-three {
+  transform: scale(1,2);
+}
+.boxes {
+  position: absolute;
+  left: 30vw;
+  top: 2vw;
+}
+.boxes div {
+  display: inline-block;
+  align-items: center;
+  width: 6vw;
+  height: 6vw;
+  background-color: blue;
+  border-radius: 50%;
+  margin: .5em;
+  transition: .5s;
+  cursor: pointer;
+}
+@keyframes jelly {
+  0% {transform: scale(1.1,1);}
+  50% {transform: scale(1,1.2);}
+  90{transform: scale(1.1,1);}
+}
+.mew {
+  position: absolute;
+  left: 80vw;
+  top: 2vw;
+  width: 18vw;
+}
+.mew div {
+  display: inline-block;
+  align-items: center;
+  width: 6vw;
+  height: 6vw;
+  background-color: #8A2BE2;
+  border-radius: 50%;
+  transition: .5s;
+  cursor: pointer;
+  transform-origin: center;
+}
+.smaller {
+width: 3vw;
+height: 3vw;
+}
+.mewtwo {
+  position: absolute;
+  left: 80vw;
+  top: 25vw;
+  width: 18vw;
+}
+.mewtwo div {
+  display: inline-block;
+  align-items: center;
+  width: 6vw;
+  height: 6vw;
+  background-color: #40E0D0;
+  border-radius: 50%;
+  transition: .5s;
+  cursor: pointer;
+  transform-origin: center;
+}
+.content {
+  position: absolute;
+  width: auto;
+  left: 30vw;
+  top: 20vw;
+}
+.content p {
+  width: 450px;
+  text-align: justify;
+}
+.here {
+  width: 0px;
+  height: 0px;
+  float: left;
+  margin-right: 5px;
+  transition: .7s;
+}
+.there {
+  width: 235px;
+  height: 230px;
+}
+.textone {
+  position: absolute;
+  top: 18vw;
+  left: 30vw;
+  width: 13vw;
+  height: auto;
+  background-color: #AFEEEE;
+  padding: 6px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.sign {
+  position: absolute;
+  top: 25vw;
+  left: 6vw;
+  background-color: black;
+  width: 6vw;
+  height: 14vw;
+  border-radius: 12px;
+  padding-top: 1vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+.stick {
+  position: absolute;
+  top: 40vw;
+  left: 9vw;
+  background-color: black;
+  width: 0.5vw;
+  height: 7vw;
+}
+/* .red {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: red;
+  margin-left: calc(3vw - 2vw);
+  opacity: 1;
+}
+.opa {
+  opacity: 0.2;
+} */
+.red {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: red;
+  margin-left: calc(3vw - 2vw);
+  opacity: 0.4;
+}
+.yellow {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: yellow;
+  margin-left: calc(3vw - 2vw);
+  margin-top: 1vw;
+  opacity: 0.4;
+
+}
+.green {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: green;
+  margin-left: calc(3vw - 2vw);
+  margin-top: 1vw;
+  opacity: 0.4;
+
+}
+.epa {
+  background-color: blue;
+}
+.runn {
+  position: absolute;
+  top: 36vw;
+  left: 14vw;
+}
+.runn img {
+  width: 4vw;
+  height: 5vw;
+}
+.walk {
+  position: absolute;
+  top: 31vw;
+  left: 14vw;
+}
+.walk img{
+  width: 3vw;
+  height: 5vw;
+}
+.stand {
+  position: absolute;
+  top: 25vw;
+  left: 14vw;
+}
+.stand img{
+  width: 4vw;
+  height: 5vw;
+}
+.eight {
+  position: absolute;
+  left: 2vw;
+  top: 55vw;
+  width: 4vw;
+  height: 4vw;
+  background-color: black;
+  transition: 1.5s;
+}
+.eight p {
+  width: 4vw;
+}
+.eighth {
+  left: 8vw;
+  top: 55vw;
+  width: 4vw;
+  height: 4vw;
+  background-color: #778899;
+}
+.eye {
+  position: absolute;
+  top: 55vw;
+  left: 30vw;
+  width: 6em;
+ height: 6em;
+ background: black;
+ border-radius: 70% 0 / 70%;
+  transform: rotate(45deg);
+}
+.white {
+  position: relative;
+  margin-top: 1vw;
+  margin-left: 1vw;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  background-color: white;
+  transition: .2s;
+}
+.whitec {
+  margin-left: 0.2vw;
+}
+.whitel {
+  margin-left: 2vw;
+}
+.theend {
+  position: absolute;
+  top: 50vw;
+  left: 38vw;
+  width: 7vw;
+  font-size: 2vw;
+  background-color: #778899;
+  padding: 3px;
+}
+.eyetwo {
+  position: absolute;
+  top: 55vw;
+  left: 48vw;
+  width: 6em;
+ height: 6em;
+ background: black;
+ border-radius: 70% 0 / 70%;
+  transform: rotate(45deg);
+}
+.whitetwo {
+  position: relative;
+  margin-top: 1vw;
+  margin-left: 1vw;;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  background-color: white;
+}
+.round {
+  position: relative;
+  margin-top: -2vw;
+  margin-left: 2vw;;
+  height: 0em;
+  width: 0em;
+  border-radius: 50%;
+  background-color: black;
+  transition: .2s;
+
+}
+.roundh {
+  margin-top: -4vw;
+    margin-left: 1vw;
+    height: 3em;
+    width: 3em;
+}
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".hover").click(function(){
+            $(".slide").toggleClass("two-slide");
+        });
+
+        $(".hihi").click(function(){
+          $(".jelly").toggleClass("jelly-two");
+
+          setTimeout(function(){
+          $(".jelly").removeClass("jelly-two");
+        }, 1000)
+
+        });
+
+        $(".one, .two, .three, .four, .five, .six").click(function(){
+        $(this).animate({ opacity: "hide" }, 900);
+    });
+
+    // $(".stand").hover(function(){
+    //   $(".red").addClass(".opa");
+    // });
+    $('.eight').hover(
+           function(){ $(this).addClass('eighth') },
+           function(){ $(this).removeClass('eighth') }
+    )
+
+    $(".theend").click(function(){
+        $(".white").toggleClass("whitec");
+
+        setTimeout(function(){
+        $(".white").toggleClass("whitel");
+      }, 400);
+
+      setTimeout(function(){
+  		$(".white").removeClass("whitel");
+    }, 1000);
+
+    setTimeout(function(){
+    $(".white").removeClass("whitec");
+  }, 1300);
+    });
+
+    $(".theend").click(function(){
+        $(".round").toggleClass("roundh");
+
+      setTimeout(function(){
+      $(".round").removeClass("roundh");
+    }, 400);
+
+    setTimeout(function(){
+    $(".round").toggleClass("roundh");
+  }, 900);
+
+    setTimeout(function(){
+    $(".round").removeClass("roundh");
+  }, 1200);
+    });
+
+
+    $(".stand").hover(function(){
+      $(".red").animate({ opacity: "1" }, 900);
+    });
+
+    $(".walk").hover(function(){
+      $(".yellow").animate({ opacity: "1" }, 900);
+    });
+
+    $(".runn").hover(function(){
+      $(".green").animate({ opacity: "1" }, 900);
+    });
+
+    $(".textone").click(function(){
+    $(".here").toggleClass("there");
+
+    setTimeout(function(){
+    $(".here").removeClass("there");
+  }, 700)
+
+  $(".a, .b, .c, .d, .e, .f").hover(function(){
+  $(this).animate({ opacity: "0" }, 900);
+});
+
+$(".p, .o, .l, .i, .n, .k").hover(function(){
+$(this).animate({ width: "2vw", height: "2vw" }, 900);
+});
+
+
+});
+
+    });
+    </script>
+
+  </head>
+  <body>
+<div class="box">
+  <div class="slide">
+  </div>
+  <div class="hover">
+  </div>
+</div>
+
+<div class="box2">
+  <div class="hihi">
+  </div>
+  <div class="jelly">
+  </div>
+</div>
+
+<div class="boxes">
+<div class="one">
+</div>
+<div class="two">
+</div>
+<div class="three">
+</div>
+<div class="four">
+</div>
+<div class="five">
+</div>
+<div class="six">
+</div>
+</div>
+
+<div class="textone">
+  Я отвратительная кнопка
+</div>
+<div class="content">
+
+  <p> <img class="here" src="https://memepedia.ru/wp-content/uploads/2019/03/u-suka-10.jpg" alt=""> ЪУЪ что ты мне сделаешь:))) ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))ЪУЪ что ты мне сделаешь:)))</p>
+</div>
+
+<div class="sign">
+  <div class="red">
+  </div>
+  <div class="yellow">
+  </div>
+  <div class="green">
+  </div>
+</div>
+<div class="stick">
+</div>
+<div class="runn">
+<img src="https://svgsilh.com/svg_v2/305189.svg" alt="">
+</div>
+<div class="walk">
+  <img src="https://lh3.googleusercontent.com/proxy/2qqxiakaYGs3DUxBOcTG-_qtgn1NYjcT1I0V_xxUu0cYowQiC5IpxnMey1b6BN4uirzMkgRXvWjW3uGdKWMgBVhdrBYsNi60d4Xf_BCh-a56Dl83NaWX_nK7KuoOdQ" alt="">
+</div>
+<div class="stand">
+  <img src="https://svgsilh.com/svg_v2/310276.svg" alt="">
+</div>
+
+<div class="mew">
+<div class="a">
+</div>
+<div class="b">
+</div>
+<div class="c">
+</div>
+<div class="d">
+</div>
+<div class="e">
+</div>
+<div class="f">
+</div>
+</div>
+
+<div class="mewtwo">
+<div class="p">
+</div>
+<div class="o">
+</div>
+<div class="l">
+</div>
+<div class="i">
+</div>
+<div class="n">
+</div>
+<div class="k">
+</div>
+</div>
+
+<div class="eight">
+  <p>ааааАААА</p>
+</div>
+
+<div class="eye">
+<div class="white">
+</div>
+</div>
+
+<div class="eyetwo">
+<div class="whitetwo">
+</div>
+<div class="round">
+
+</div>
+</div>
+
+<div class="theend">
+Конец.
+</div>
+  </body>
+</html>
